@@ -1,7 +1,7 @@
 var App = () => (
   <div>
     <h2>My GroceryList</h2>
-    <GroceryList items={['Cucumber', 'Kyle', 'Butter']} />
+    <GroceryList items={['Cucumber', 'Kale', 'Butter']} />
   </div>
 );
 
