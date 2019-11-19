@@ -7,7 +7,10 @@ var App = () => (
 
 var GroceryList = (props) => (
   <ul>
-    {props.items.map(item => <GroceryListItem item={item} />
+    {/* Add "key" property to resolve the Warning: Each child in an array or iterator should have a unique "key" prop. */}
+    {props.items.map(
+      (item, idx) =>
+        <GroceryListItem item={item} key={item + idx} />
     )}
   </ul>
 );
