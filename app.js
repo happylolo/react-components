@@ -1,4 +1,3 @@
-// TODO
 var App = () => (
   <div>
     <h2>My GroceryList</h2>
@@ -7,19 +6,16 @@ var App = () => (
 );
 
 var GroceryList = () => (
-  <ul>
-    <Cucumbers />
-    <Kale />
+  <GroceryListItem items = {['Cucumbers', 'Kale', 'Butter']} />
+);
 
+var GroceryListItem = (props) => (
+  // passing properties from Parent to Child, using props
+  <ul>
+    <li>{props.items[0]}</li>
+    <li>{props.items[1]}</li>
+    <li>{props.items[2]}</li>
   </ul>
 );
 
-var Cucumbers = () => (
-  <li>Cucumbers</li>
-);
-
-var Kale = () => (
-  <li>Kale</li>
-);
-
-ReactDOM.render(<GroceryList />, document.getElementById("app"))
+ReactDOM.render(<App />, document.getElementById('app'));
